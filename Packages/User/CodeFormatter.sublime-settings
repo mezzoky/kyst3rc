@@ -1,0 +1,15 @@
+{
+    "codeformatter_js_options":
+    {
+        "indent_size": 4, // indentation size
+    },
+    "codeformatter_css_options":
+    {
+        "indent_size": 2, // Indentation size
+    },
+
+    "codeformatter_html_options":
+    {
+        "indent_size": 2, // indentation size
+    },
+}

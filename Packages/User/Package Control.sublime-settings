@@ -1,0 +1,35 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"AngularJS",
+		"Babel",
+		"CodeFormatter",
+		"ColorPicker",
+		"DocBlockr",
+		"EditorConfig",
+		"Emmet",
+		"Git",
+		"Handlebars",
+		"HTML-CSS-JS Prettify",
+		"HTML5",
+		"knockdown",
+		"Markdown Preview",
+		"Material Theme",
+		"Monokai Extended",
+		"Package Control",
+		"Seti_UI",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pyflakes",
+		"Theme - El Capitan",
+		"Theme - Moka",
+		"Theme - Piatto"
+	]
+}
