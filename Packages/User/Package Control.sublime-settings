@@ -17,19 +17,14 @@
 		"Handlebars",
 		"HTML-CSS-JS Prettify",
 		"HTML5",
-		"knockdown",
-		"Markdown Preview",
+		"MarkdownEditing",
 		"Material Theme",
 		"Monokai Extended",
 		"Package Control",
-		"Seti_UI",
-		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-pep8",
-		"SublimeLinter-pyflakes",
-		"Theme - El Capitan",
-		"Theme - Moka",
-		"Theme - Piatto"
+		"SublimeLinter-pyflakes"
 	]
 }

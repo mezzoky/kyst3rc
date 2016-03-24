@@ -1,76 +1,70 @@
 {
-	"Seti_SB_bright": true,
-	"Seti_blue_tab_label": true,
-	"Seti_in_4_a_treat": true,
-	"Seti_no_bar_undertabs": true,
-	"Seti_no_blue_bar": true,
-	"Seti_orange_button": true,
-	"Seti_orange_label": true,
-	"Seti_pad_3": true,
-	"Seti_rainbow": true,
-	"Seti_sb_small_padding": true,
-	"Seti_sb_tree_small": true,
-	"Seti_sb_wild": true,
-	"Seti_tabs_small": true,
+	"always_show_minimap_viewport": true,
 	"anaconda_linting": false,
 	"auto_completion": false,
-	"bold_folder_labels": false,
+	"bold_folder_labels": true,
 	"caret_extra_bottom": 3,
 	"caret_extra_top": 3,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
 	"color_scheme": "Packages/User/SublimeLinter/Monokai Extended Bright (SL).tmTheme",
 	"drag_text": false,
-	"draw_minimap_border": false,
-	"el_capitan_font_default": false,
-	"el_capitan_font_helvetica": true,
-	"el_capitan_font_helvetica_neue": false,
-	"el_capitan_font_san_francisco": false,
-	"el_capitan_sidebar_blue_folders": true,
+	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
-	"fade_fold_buttons": true,
+	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
 		"*.doc",
 		"*.docx",
 		"*.pyc",
 		"*.map",
-		".DS_Store"
+		".DS_Store",
+		"*.pid"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
 		"__pycache__",
-		".git",
+		".git"
 	],
 	"font_face": "ubuntu mono",
-	"font_size": 17,
+	"font_size": 15,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Markdown",
 		"Vintage"
 	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
 	"line_numbers": true,
-	"line_padding_bottom": 3,
-	"line_padding_top": 3,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"material_theme_accent_indigo": false,
 	"material_theme_accent_lime": true,
-	"material_theme_accent_orange": true,
-	"material_theme_accent_purple": true,
-	"material_theme_accent_red": true,
-	"material_theme_accent_yellow": true,
-	"material_theme_bold_tab": true,
+	"material_theme_accent_orange": false,
+	"material_theme_accent_purple": false,
+	"material_theme_accent_red": false,
+	"material_theme_accent_yellow": false,
+	"material_theme_bold_tab": false,
+	"material_theme_compact_panel": true,
+	"material_theme_compact_sidebar": true,
+	"material_theme_contrast_mode": true,
 	"material_theme_disable_fileicons": false,
-	"material_theme_disable_folder_animation": false,
+	"material_theme_disable_folder_animation": true,
 	"material_theme_disable_tree_indicator": true,
 	"material_theme_panel_separator": true,
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
 	"material_theme_tabs_autowidth": true,
-	"material_theme_tabs_separator": true,
-	"moka_folder_icons": false,
+	"material_theme_tabs_separator": false,
+	"material_theme_tree_headings": true,
 	"move_to_limit_on_up_down": false,
-	"overlay_scroll_bars": "enabled",
+	"overlay_scroll_bars": "disabled",
 	"paths":
 	{
 		"linux":
@@ -84,15 +78,13 @@
 		[
 		]
 	},
-	"piatto_folder_icons": false,
 	"rulers":
 	[
 		80
 	],
 	"scroll_past_end": true,
 	"scroll_speed": 0,
-	"show_tab_close_buttons": true,
-	"theme": "Material-Theme.sublime-theme",
-	"translate_tabs_to_spaces": true,
-	"wiDe_caret": true
+	"show_tab_close_buttons": false,
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"translate_tabs_to_spaces": true
 }

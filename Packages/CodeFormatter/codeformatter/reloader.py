@@ -1,6 +1,7 @@
-# @author 			Avtandil Kikabidze
-# @copyright 		Copyright (c) 2008-2015, Avtandil Kikabidze aka LONGMAN (akalongman@gmail.com)
-# @link 			http://long.ge
+# @author           Avtandil Kikabidze
+# @contributors Avtandil Kikabidze, Nishutosh Sharma
+# @copyright        Copyright (c) 2008-2015, Avtandil Kikabidze aka LONGMAN (akalongman@gmail.com)
+# @link 			http://longman.me
 # @license 		The MIT License (MIT)
 
 import sublime
@@ -28,7 +29,9 @@ mods_load_order = [
     '.jsformatter',
     '.htmlformatter',
     '.cssformatter',
+    '.scssformatter',
     '.pyformatter',
+    '.vbscriptformatter',
     '.formatter'
 ]
 

@@ -1,7 +1,7 @@
-# @author 			Avtandil Kikabidze
-# @copyright 		Copyright (c) 2008-2015, Avtandil Kikabidze aka LONGMAN (akalongman@gmail.com)
-# @link 			http://long.ge
-# @license 		The MIT License (MIT)
+# @author             Avtandil Kikabidze
+# @copyright         Copyright (c) 2008-2015, Avtandil Kikabidze aka LONGMAN (akalongman@gmail.com)
+# @link             http://longman.me
+# @license         The MIT License (MIT)
 
 import os
 import sys
@@ -12,55 +12,60 @@ import subprocess
 import htmlbeautifier
 
 class HtmlFormatter:
-	def __init__(self, formatter):
-		self.formatter = formatter
+    def __init__(self, formatter):
+        self.formatter = formatter
+        self.opts = formatter.settings.get('codeformatter_html_options')
 
+    def format(self, text):
+        text = text.decode("utf-8")
 
-	def format(self, text):
-		text = text.decode("utf-8")
-		opts = self.formatter.settings.get('codeformatter_html_options')
+        stderr = ""
+        stdout = ""
+        options = htmlbeautifier.default_options()
 
+        if "indent_size" in self.opts:
+            options.indent_size = self.opts["indent_size"]
 
-		stderr = ""
-		stdout = ""
-		options = htmlbeautifier.default_options()
+        if "indent_char" in self.opts:
+            options.indent_char = str(self.opts["indent_char"])
 
-		if ("indent_size" in opts and opts["indent_size"]):
-			options.indent_size = opts["indent_size"]
-		else:
-			options.indent_size = 4
+        if "minimum_attribute_count" in self.opts:
+            options.minimum_attribute_count = self.opts["minimum_attribute_count"]
+            
+        if "first_attribute_on_new_line" in self.opts:
+            options.first_attribute_on_new_line = self.opts["first_attribute_on_new_line"]
 
+        if "indent_with_tabs" in self.opts:
+            options.indent_with_tabs = self.opts["indent_with_tabs"]
 
-		if ("indent_char" in opts and opts["indent_char"]):
-			options.indent_char = str(opts["indent_char"])
-		else:
-			options.indent_char = "	"
+        if "expand_tags" in self.opts:
+            options.expand_tags = self.opts["expand_tags"]
 
-		if ("indent_with_tabs" in opts and opts["indent_with_tabs"]):
-			options.indent_with_tabs = True
-		else:
-			options.indent_with_tabs = False
+        if "expand_javascript" in self.opts:
+            options.expand_javascript = self.opts["expand_javascript"]
 
-		if ("preserve_newlines" in opts and opts["preserve_newlines"]):
-			options.preserve_newlines = True
-		else:
-			options.preserve_newlines = False
+        if "reduce_empty_tags" in self.opts:
+            options.reduce_empty_tags = self.opts["reduce_empty_tags"]
 
-		if ("max_preserve_newlines" in opts and opts["max_preserve_newlines"]):
-			options.max_preserve_newlines = opts["max_preserve_newlines"]
-		else:
-			options.max_preserve_newlines = 10
+        if "exception_on_tag_mismatch" in self.opts:
+            options.exception_on_tag_mismatch = self.opts["exception_on_tag_mismatch"]
+            
+        if "custom_singletons" in self.opts:
+            options.custom_singletons = self.opts["custom_singletons"]
 
-		if ("indent_tags" in opts and opts["indent_tags"]):
-			options.indent_tags = str(opts["indent_tags"])
+        try:
+              stdout = htmlbeautifier.beautify(text, options)
+        except Exception as e:
+             stderr = str(e)
 
-		try:
- 		 	stdout = htmlbeautifier.beautify(text, options)
-		except Exception as e:
-		 	stderr = str(e)
+        if (not stderr and not stdout):
+            stderr = "Formatting error!"
 
-		if (not stderr and not stdout):
-			stderr = "Formatting error!"
+        return stdout, stderr
 
-		return stdout, stderr
+    def formatOnSaveEnabled(self):
+        format_on_save = False
+        if ("format_on_save" in self.opts and self.opts["format_on_save"]):
+            format_on_save = self.opts["format_on_save"]
+        return format_on_save
 
