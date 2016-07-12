@@ -3,11 +3,11 @@
 	"anaconda_linting": false,
 	"auto_completion": false,
 	"bold_folder_labels": true,
-	"caret_extra_bottom": 3,
-	"caret_extra_top": 3,
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/SublimeLinter/Monokai Extended Bright (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai Extended (SL).tmTheme",
 	"drag_text": false,
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -19,16 +19,19 @@
 		"*.pyc",
 		"*.map",
 		".DS_Store",
-		"*.pid"
+		"*.pid",
+		"*.min.js",
+		"*.min.css"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
 		"__pycache__",
-		".git"
+		".git",
+		"lib"
 	],
 	"font_face": "ubuntu mono",
-	"font_size": 15,
+	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -43,7 +46,7 @@
 	],
 	"line_numbers": true,
 	"line_padding_bottom": 2,
-	"line_padding_top": 2,
+	"line_padding_top": 1,
 	"material_theme_accent_indigo": false,
 	"material_theme_accent_lime": true,
 	"material_theme_accent_orange": false,
@@ -84,7 +87,8 @@
 	],
 	"scroll_past_end": true,
 	"scroll_speed": 0,
+	"show_full_path": false,
 	"show_tab_close_buttons": false,
-	"theme": "Material-Theme.sublime-theme",
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
